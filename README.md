@@ -15,6 +15,15 @@
 * **Find notes instantly:** Leverage the powerful search bar to pinpoint specific content.
 
 
+# Download APK(s)
+
+| Type                        | Description                                       | Download Link                                     |
+| --------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| **app-arm64-v8a-release.apk** | For ARM 64-bit architecture devices.            | [Download ARM64 APK](https://github.com/ItsAkashS22/Notes-Plus/raw/main/APKs/app-arm64-v8a-release.apk)               |
+| **app-armeabi-v7a-release.apk** | For ARM 32-bit architecture devices.          | [Download ARMv7 APK](https://github.com/ItsAkashS22/Notes-Plus/raw/main/APKs/app-armeabi-v7a-release.apk)               |
+| **app-x86_64-release.apk**   | For x86 64-bit architecture devices.             | [Download x86_64 APK](https://github.com/ItsAkashS22/Notes-Plus/raw/main/APKs/app-x86_64-release.apk)             |
+
+
 # Key Features
 
 * **Offline-first:** Create and edit notes even without an internet connection.
