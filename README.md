@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/ItsAkashS22/Notes-Plus/blob/main/assets/logo.png?raw=true" alt="Project Image">
+</div>
+
 # Notes Plus - Unleash Your Creativity, Capture Your Ideas
 *Effortlessly capture thoughts, plans, and more – online or offline – with Notes Plus, a modern note-taking app built for seamless organization and cloud synchronization.*
 
@@ -89,3 +93,8 @@ Notes Plus utilizes the Flutter Bloc library for efficient state management. Flu
 
 - **`main.dart`:** Entry point of the Flutter application. Contains the `main` function that kicks off the app.
 
+# What Next
+
+- [ ] Implement `BackgroundColor` & `TextColor` for Notes
+- [ ] Refactor code & extract widgets in `views/`
+- [ ] Logging of errors to `crashlytics`
