@@ -1,30 +1,91 @@
-# notes_plus
+# Notes Plus - Unleash Your Creativity, Capture Your Ideas
+*Effortlessly capture thoughts, plans, and more – online or offline – with Notes Plus, a modern note-taking app built for seamless organization and cloud synchronization.*
 
-A new Flutter project.
+* **Always accessible:** Capture and edit notes even without an internet connection.
+* **Never lose a thought:** Notes automatically sync across devices when you reconnect.
+* **Personalize your environment:** Choose between light and dark themes.
+* **Sign in with ease:** Use your existing Google account for secure and convenient access.
+* **Reliable storage:** Enjoy peace of mind with local data management using SQLite.
+* **Cloud backups:** Ensure your notes are always accessible with Firebase Firestore.
+* **Express yourself:** Choose from a variety of fonts to suit your style.
+* **Find notes instantly:** Leverage the powerful search bar to pinpoint specific content.
 
-## Getting Started
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple).
+# Key Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* **Offline-first:** Create and edit notes even without an internet connection.
+* **Cloud sync:** Your notes automatically sync across devices when you reconnect.
+* **Light & Dark Mode:** Choose a theme that suits your environment and preferences.
+* **Google Sign-in:** Sign in quickly and securely with your existing Google account.
+* **SQLite Storage:** Reliable local storage for peace of mind.
+* **Firebase Integration:** Scalable cloud infrastructure for future growth.
+* **Font Customization:** Express yourself with a variety of font options.
+* **Powerful Search:** Instantly find notes using keywords or phrases.
 
-## Assets
+# Built Using Flutter
+Native performance on Android and iOS with cross-platform development.
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
+* **SQLite:** Reliable and efficient local data storage.
+* **Firebase Firestore:** Scalable cloud storage and synchronization.
+* **Google Sign-in:** Secure and convenient authentication.
 
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
 
-## Localization
+# State Management with Flutter Bloc
 
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
+Notes Plus utilizes the Flutter Bloc library for efficient state management. Flutter Bloc is a predictable state management library that helps in organizing and managing the state of the application, making it easier to handle complex UI interactions. The use of Flutter Bloc ensures a clear and maintainable separation of concerns in the app's architecture, enhancing code readability and scalability.
 
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter
-apps](https://flutter.dev/docs/development/accessibility-and-localization/internationalization)
+
+# Get Started
+
+1. **Prerequisites:**
+
+    * Flutter development environment - [https://flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)
+    * Firebase project with enabled Firestore and Authentication - [https://console.firebase.google.com/](https://console.firebase.google.com/)
+    * Flutter Bloc for state management - [https://pub.dev/packages/flutter_bloc](https://pub.dev/packages/flutter_bloc)
+
+
+2. **Clone the repository:**
+    ```bash
+    git clone https://github.com/ItsAkashS22/Notes-Plus.git
+    ```
+
+3. **Install dependencies:**
+    ```bash
+    cd notes-plus
+    flutter pub get
+    ```
+
+4. **Configure Firebase:**
+
+    - Create a new project on [Firebase](https://console.firebase.google.com/).
+    - Obtain the ```google-services.json``` file and place it in the android/app directory.
+    - Enable Firestore and Authentication in the Firebase console.
+
+
+5. **Run the app:**
+    ```bash
+    flutter run
+    
+# Folder Structure
+
+- **`core/`:** Core functionality or business logic not specific to a feature. Common utilities, extensions, or base classes may reside here.
+
+- **`models/`:** Contains data models representing the structure of the application's data.
+
+- **`repositories/`:** Manages data fetching, storage, and communication with external sources. Repositories abstract the data layer.
+
+- **`services/`:** Holds code related to various services, such as API calls, authentication, or other business logic not tied to a UI component.
+
+- **`utils/`:** Includes utility functions or helper classes used throughout the application.
+
+- **`views/`:** Houses UI components or screens of the application. Each screen may have its own Dart file within this folder.
+    - **`<view>/bloc/`:** Contains Business Logic Components (BLoCs) associated with each view.
+
+- **`widgets/`:** For reusable UI components or widgets shared across multiple screens.
+
+- **`app.dart`:** Main application class or configuration, defining the top-level widget for the app.
+
+- **`firebase_options.dart`:** Contains configuration options for Firebase services.
+
+- **`main.dart`:** Entry point of the Flutter application. Contains the `main` function that kicks off the app.
+

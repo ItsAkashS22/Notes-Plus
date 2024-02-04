@@ -21,12 +21,12 @@ class FirestoreService {
 
   Future<QuerySnapshot?> read(
     String collection, {
-    FutureOr<void> Function(Query)? settings,
+    Query<Object?> Function(Query)? settings,
   }) async {
     try {
       Query query = _firestore.collection(collection);
       if (settings != null) {
-        await settings(query);
+        return await settings(query).get();
       }
       return await query.get();
     } catch (e) {

@@ -21,7 +21,13 @@ dependencies:
   # Data
   sqflite: ^2.3.2
   shared_preferences: ^2.2.2
+
+  # Utils
   uuid: ^4.3.3
+  equatable: ^2.0.5
+  intl: ^0.19.0
+  cron: ^0.6.0
+  connectivity_plus: ^5.0.2
 
   # Firebase
   firebase_core: ^2.25.3

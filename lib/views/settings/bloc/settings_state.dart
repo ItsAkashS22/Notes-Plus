@@ -1,16 +1,27 @@
 part of 'settings_bloc.dart';
 
-sealed class SettingsState {}
+sealed class SettingsState extends Equatable {}
 
-final class SettingsLoading extends SettingsState {}
-
-final class SettingsLoaded extends SettingsState {
-  final UserModel? user;
-  SettingsLoaded({required this.user});
+final class SettingsLoadingState extends SettingsState {
+  @override
+  List<Object?> get props => [];
 }
 
-final class SettingsError extends SettingsState {
+final class SettingsLoadedState extends SettingsState {
+  final UserModel? user;
+  SettingsLoadedState({required this.user});
+  @override
+  List<Object?> get props => [
+        user,
+      ];
+}
+
+final class SettingsErrorState extends SettingsState {
   final String errorMessage;
 
-  SettingsError({required this.errorMessage});
+  SettingsErrorState({required this.errorMessage});
+  @override
+  List<Object?> get props => [
+        errorMessage,
+      ];
 }

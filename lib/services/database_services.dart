@@ -1,4 +1,6 @@
 import 'dart:developer';
+import 'package:notes_plus/models/note_model.dart';
+import 'package:notes_plus/utils/helpers.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DatabaseServices {
@@ -12,7 +14,7 @@ class DatabaseServices {
       version: 1,
       onCreate: (db, version) async {
         await db.execute(
-          'CREATE TABLE your_table (id TEXT, name TEXT, age INTEGER)',
+          NoteModel.createQuery,
         );
       },
     );
@@ -21,10 +23,9 @@ class DatabaseServices {
   Future<bool> insert(String table, Map<String, Object?> values) async {
     final db = await _db;
     try {
-      values["toBeSynced"] = true;
       if ((await db.insert(
             table,
-            values,
+            convertBoolToBits(values),
             conflictAlgorithm: ConflictAlgorithm.replace,
           )) >
           0) {
@@ -84,10 +85,35 @@ class DatabaseServices {
     try {
       if ((await db.update(
             table,
-            values,
+            convertBoolToBits(values),
             where: where,
             whereArgs: whereArgs,
             conflictAlgorithm: ConflictAlgorithm.replace,
+          )) >
+          0) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      log("SQliteDatabaseError", error: e);
+      return false;
+    } finally {
+      await db.close();
+    }
+  }
+
+  Future<bool> delete(
+    String table, {
+    required String? where,
+    required List<Object?>? whereArgs,
+  }) async {
+    final db = await _db;
+    try {
+      if ((await db.delete(
+            table,
+            where: where,
+            whereArgs: whereArgs,
           )) >
           0) {
         return true;

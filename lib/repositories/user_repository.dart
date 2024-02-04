@@ -3,7 +3,11 @@ import 'package:notes_plus/models/user_model.dart';
 import 'package:notes_plus/services/auth_services.dart';
 
 class UserRepository {
-  final AuthServices _authServices = AuthServices();
+  final AuthServices _authServices;
+
+  UserRepository({
+    required AuthServices authServices,
+  }) : _authServices = authServices;
 
   Future<UserModel?> getCurrentUser() async {
     User? user = await _authServices.getCurrentUser();
@@ -23,6 +27,7 @@ class UserRepository {
     if (user == null) {
       return null;
     }
+
     return UserModel(
       uid: user.uid,
       displayName: user.displayName ?? "-",
