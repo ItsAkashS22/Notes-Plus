@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/ItsAkashS22/Notes-Plus/blob/main/assets/logo.png?raw=true" alt="Project Image">
+  <img src="./screenshots/4x2-Display.jpg" alt="Project Image">
 </div>
 
 # Notes Plus - Unleash Your Creativity, Capture Your Ideas
